@@ -1,0 +1,264 @@
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+    @import url('https://fonts.cdnfonts.com/css/sf-pro-display?styles=98774,98777,98776,98772,98773,98775,98770,98771,98769');
+*{
+        width: 100%;
+        height: 100%;
+        padding: 0;
+        margin: 0;
+}
+#hero{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-color: #131313;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    font-family: 'SF Pro Display', sans-serif;
+    overflow: hidden;
+}
+#hero .text-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    margin-top: 32px;
+}
+#hero .text-container h1{
+    font-size: 36pt;
+    max-width: 60%;
+    color: #fff;
+    text-align: center;
+}
+#hero .text-container p{
+    font-size: 16pt;
+    max-width: 50%;
+    color: #737373;
+    font-weight: 400;
+    text-align: center;
+    margin: 20px 0;
+}
+#hero .text-container .bbt{
+    max-width: 160px;
+    padding: 12px 20px;
+    border-radius: 24px;
+    background-color: #0048D5;
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 300;
+    font-family: 'SF Pro Display', sans-serif; 
+    margin: auto;  
+}
+
+#hero .left{
+position: absolute;
+top: 48;
+left: -0;
+max-width: 337px;
+max-height: 493px;
+}
+#hero .center{
+position: absolute;
+bottom: -265;
+left: 27%;
+max-width: 597px;
+max-height: 547px;
+}
+#hero .right{
+position: absolute;
+top: 40;
+right: -0;
+max-width: 374px;
+max-height: 581px;
+}
+#hero .hic img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+#hero .dot{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 100%;
+    background-color: #0048D5;
+    cursor: pointer;
+    z-index: 0;
+}
+#hero .dot svg {
+    width: 20px;
+    height: 20px;
+    fill: #fff;
+}
+#hero .dot::before {
+    content: "";
+    position: absolute;
+    width: 68px; 
+    height: 68px; 
+    border-radius: 100%;
+    border: 1px solid #0048D5;
+    opacity: 0.6;
+    z-index: 0;
+}
+
+#hero .dot::after {
+    content: "";
+    position: absolute;
+    width: 88px; 
+    height: 88px;
+    border-radius: 100%;
+    border: 0.5px solid #0048D5;
+    opacity: 0.2;
+    z-index: 0;
+}
+#hero .left .dot{
+    top: 370;
+    left: 100;
+}
+#hero .center .dot{
+top: 175;
+left: 480;
+}
+#hero .right .dot{
+top: 235;
+right: 195;
+}
+
+#hero .hic .modal{
+position: absolute;
+top: 2;
+left: 0;
+width: 196px;
+padding: 60px 10px 15px 25px;;
+height: auto;
+border-radius: 2px;
+box-shadow: 0 3px 10px #00000030;
+background-color: #fff;
+color: #222;
+z-index: 10;
+opacity: 0;
+transition: opacity 0.25s ease-in-out;
+mix-blend-mode: difference;
+}
+
+/* Responsive */
+@media all and (max-width:600px) { 
+#hero{
+padding-top: 6vh;
+}
+    #hero .text-container h1{
+    font-size: 24pt;
+    max-width: 306px;
+    color: #fff;
+    text-align: center;
+}
+#hero .text-container p{
+    font-size: 14pt;
+    max-width: 80%;
+}
+#hero .left, .right{
+display: none;
+}
+#hero .left .dot, .right .dot{
+display: none;
+}
+#hero .center .dot{
+top: 24vh;
+left: 68vw;
+}
+#hero .center{
+position: absolute;
+bottom: -100;
+left: 5vw;
+max-width: 90%;
+max-height: 60%;
+}
+}
+</style>
+<section id="hero">
+    <div class="text-container">
+        <h1>Protection Acrylique , Portfolio & Accessoire</h1>
+        <p>Découvrez la liste de nos produits</p>
+        <button class="bbt">Découvrir</button>
+    </div>
+
+    <!-- visuel -->
+    <div class="hic left" >
+        <!-- image -->
+        <img src="./assets/lhi.png" alt="">
+        <!-- dot -->
+        <div class="dot">    
+        <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="16px" viewBox="0 0 24 24" width="16px" fill="#FFFFFF"><g><rect fill="none" height="24" width="24"/></g><g><g><path d="M12,2L4,5v6.09c0,5.05,3.41,9.76,8,10.91c4.59-1.15,8-5.86,8-10.91V5L12,2z"/></g></g></svg>
+        <!-- modal -->
+        <div id="modal" class="modal">
+            <p>
+            Put your sleeved cards into binders to organise, store and trade.
+            </p>
+        </div>
+    </div>
+    </div>
+
+    <!-- visuel -->
+    <div class="hic center">
+         <!-- image -->
+        <img src="./assets/chi.png" alt="">
+        <!-- dot -->
+        <div class="dot">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                <path fill-rule="evenodd" d="M3 2.25a.75.75 0 0 1 .75.75v.54l1.838-.46a9.75 9.75 0 0 1 6.725.738l.108.054A8.25 8.25 0 0 0 18 4.524l3.11-.732a.75.75 0 0 1 .917.81 47.784 47.784 0 0 0 .005 10.337.75.75 0 0 1-.574.812l-3.114.733a9.75 9.75 0 0 1-6.594-.77l-.108-.054a8.25 8.25 0 0 0-5.69-.625l-2.202.55V21a.75.75 0 0 1-1.5 0V3A.75.75 0 0 1 3 2.25Z" clip-rule="evenodd" />
+              </svg>
+              <!-- modal -->
+              <div id="modal" class="modal">
+                <p>
+                Put your sleeved cards into binders to organise, store and trade.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- visuel -->
+    <div class="hic right">
+         <!-- image -->
+        <img  src="./assets/rhi.png" alt=""> 
+        <!-- dot -->
+        <div class="dot">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                <path fill-rule="evenodd" d="M3 2.25a.75.75 0 0 1 .75.75v.54l1.838-.46a9.75 9.75 0 0 1 6.725.738l.108.054A8.25 8.25 0 0 0 18 4.524l3.11-.732a.75.75 0 0 1 .917.81 47.784 47.784 0 0 0 .005 10.337.75.75 0 0 1-.574.812l-3.114.733a9.75 9.75 0 0 1-6.594-.77l-.108-.054a8.25 8.25 0 0 0-5.69-.625l-2.202.55V21a.75.75 0 0 1-1.5 0V3A.75.75 0 0 1 3 2.25Z" clip-rule="evenodd" />
+              </svg>
+              <!-- modal -->
+              <div id="modal" class="modal">
+                <p>
+                Put your sleeved cards into binders to organise, store and trade.
+                </p>
+            </div>
+        </div>
+        </div>
+
+</section>
+<script>
+    const dots = document.querySelectorAll('.dot');
+    const modals = document.querySelectorAll('[id^="modal"]');
+
+    dots.forEach((dot, index) => {
+      dot.addEventListener('click', () => {
+        modals.forEach((modal, i) => {
+      if (i === index) {
+        modal.style.opacity = modal.style.opacity === '1' ? '0' : '1';
+      } else {
+        modal.style.opacity = '0';
+      }
+    });
+      });
+    });
+</script>
