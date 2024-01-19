@@ -135,6 +135,7 @@ top: 235;
 right: 195;
 }
 
+/* Modal Design */
 #hero .hic .modal{
 position: absolute;
 top: 2;
@@ -150,6 +151,10 @@ z-index: 10;
 opacity: 0;
 transition: opacity 0.25s ease-in-out;
 mix-blend-mode: difference;
+}
+
+#hero .dot:hover  .modal{
+    opacity: 1;
 }
 
 /* Responsive */
@@ -246,19 +251,3 @@ max-height: 60%;
         </div>
 
 </section>
-<script>
-    const dots = document.querySelectorAll('.dot');
-    const modals = document.querySelectorAll('[id^="modal"]');
-
-    dots.forEach((dot, index) => {
-      dot.addEventListener('click', () => {
-        modals.forEach((modal, i) => {
-      if (i === index) {
-        modal.style.opacity = modal.style.opacity === '1' ? '0' : '1';
-      } else {
-        modal.style.opacity = '0';
-      }
-    });
-      });
-    });
-</script>
